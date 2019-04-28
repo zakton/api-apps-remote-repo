@@ -12,3 +12,7 @@ class LoginForm(FlaskForm):
 class WeatherForm(FlaskForm):
     city = StringField('City', validators=[Required()])
     submit = SubmitField('Submit')
+
+class AirportForm(FlaskForm):
+    city = StringField('City', validators=[Required()])
+    submit = SubmitField('Submit')
