@@ -39,11 +39,11 @@ def airport_app():
     if form.validate_on_submit():
         data, data_OK = get_airports(form.city.data)
         if data_OK:
-            return render_template('airport_app.html', form=form, data=data)
+            return render_template('airport.html', form=form, data=data)
         else:
-            return render_template('airport_app.html', form=form, data=None)
+            return render_template('airport.html', form=form, data=None)
 
-    return render_template('airport_app.html', form=form)
+    return render_template('airport.html', form=form)
 
 ### Archive
 

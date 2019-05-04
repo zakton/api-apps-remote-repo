@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Zakton Technology{% endblock %}
+
+{% block page_content %}
+  <h1>Airport App</h1>
+
+  <div class="row">
+      <div class="col-md-3">
+          {{ wtf.quick_form(form) }}
+      </div>
+  </div>
+
+  <br>
+
+  {% if data is defined %}
+      {% if data != None %}
+
+        <table class="table table-hover">
+
+          <tr>
+            <th>Place ID</th>
+            <th>Place Name</th>
+            <th>Country ID</th>
+            <th>Country</th>
+            <th>City ID</th>
+          </tr>
+
+          {% for r in data['Places'] %}
+          <tr>
+             <td>{{r.PlaceId}}</td>
+             <td>{{r.PlaceName}}</td>
+             <td>{{r.CountryId}}</td>
+             <td>{{r.CountryName}}</td>
+             <td>{{r.CityId}}</td>
+          </tr>
+          {% endfor %}
+
+        </table>
+
+      {% else %}
+        <p>City not found!</p>
+      {% endif %}
+  {% endif %}
+
+{% endblock %}

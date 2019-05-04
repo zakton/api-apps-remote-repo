@@ -1,0 +1,9 @@
+{'Places':
+  [{'PlaceId': 'CGKI-sky',
+  'PlaceName': 'Jakarta',
+  'CountryId': 'ID-sky',
+  'RegionId': '',
+  'CityId': 'CGKI-sky',
+  'CountryName': 'Indonesia'},
+
+  {'PlaceId': 'CGK-sky', 'PlaceName': 'Soekarno-Hatta Jakarta', 'CountryId': 'ID-sky', 'RegionId': '', 'CityId': 'CGKI-sky', 'CountryName': 'Indonesia'}, {'PlaceId': 'HLP-sky', 'PlaceName': 'Halim Perdana Kusuma Jakarta', 'CountryId': 'ID-sky', 'RegionId': '', 'CityId': 'CGKI-sky', 'CountryName': 'Indonesia'}]}
