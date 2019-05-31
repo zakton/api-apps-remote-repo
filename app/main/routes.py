@@ -45,8 +45,6 @@ def airport_app():
 
     return render_template('airport.html', form=form)
 
-### Archive
-
 @main.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -55,7 +53,7 @@ def login():
         if user is None or not user.verify_password(form.password.data):
             return redirect(url_for('main.login', **request.args))
         login_user(user, form.remember_me.data)
-        return redirect(request.args.get('next') or url_for('main.index'))
+        return redirect(request.args.get('next') or url_for('main.protected'))
     return render_template('login.html', form=form)
 
 @main.route('/logout')
